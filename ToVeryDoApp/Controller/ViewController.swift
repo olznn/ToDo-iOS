@@ -10,13 +10,15 @@ import UIKit
 import PaperOnboarding
 
 
-class ViewController: UIViewController, PaperOnboardingDataSource {
+class ViewController: UIViewController, PaperOnboardingDataSource, PaperOnboardingDelegate {
     
     @IBOutlet weak var onBoardingView: OnBoardingView!
     
+    @IBOutlet weak var btnGetStarted: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         onBoardingView.dataSource = self
+        onBoardingView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +45,30 @@ class ViewController: UIViewController, PaperOnboardingDataSource {
                 OnboardingItemInfo(informationImage: imgTwo, title: "Get Notifications", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra nulla id lobortis sollicitudin. Curabitur eu turpis iaculis, euismod odio ac, molestie diam.", pageIcon: UIImage(named:"dot-single")!, color: bgColorTwo, titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: title, descriptionFont: description)
                 ][index]
         }
+    
+    func onboardingDidTransitonToIndex(_ index: Int)
+    {
+        if index == 1
+        {
+            UIView.animate(withDuration: 0.4, animations: {
+                self.btnGetStarted.alpha = 1
+            })
+           
+        }
+    }
+    
+    func onboardingWillTransitonToIndex(_ index: Int)
+    {
+        if index == 0
+        {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.btnGetStarted.alpha = 0
+            })
+            
+        }
+    }
+    
+   
     
 
 
