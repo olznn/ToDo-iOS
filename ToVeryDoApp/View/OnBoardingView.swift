@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PaperOnboarding
 class OnBoardingView: PaperOnboarding {
 
 }

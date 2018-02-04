@@ -14,6 +14,10 @@
 		9B224AE620272AB900B4C126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B224AE420272AB900B4C126 /* LaunchScreen.storyboard */; };
 		9B224AF120272AB900B4C126 /* ToVeryDoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B224AF020272AB900B4C126 /* ToVeryDoAppTests.swift */; };
 		9B224AFC20272ABA00B4C126 /* ToVeryDoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B224AFB20272ABA00B4C126 /* ToVeryDoAppUITests.swift */; };
+		9B224B0D2027325F00B4C126 /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B224B0C2027325F00B4C126 /* PaperOnboarding.framework */; };
+		9B224B0E2027325F00B4C126 /* PaperOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B224B0C2027325F00B4C126 /* PaperOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B224B112027328D00B4C126 /* ToVeryDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B224B102027328D00B4C126 /* ToVeryDoApp.swift */; };
+		9B224B132027372000B4C126 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B224B122027372000B4C126 /* OnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9B224B0F2027325F00B4C126 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B224B0E2027325F00B4C126 /* PaperOnboarding.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9B224AD820272AB900B4C126 /* ToVeryDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToVeryDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B224ADB20272AB900B4C126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +65,9 @@
 		9B224AF720272AB900B4C126 /* ToVeryDoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToVeryDoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B224AFB20272ABA00B4C126 /* ToVeryDoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToVeryDoAppUITests.swift; sourceTree = "<group>"; };
 		9B224AFD20272ABA00B4C126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B224B0C2027325F00B4C126 /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/Build/iOS/PaperOnboarding.framework; sourceTree = "<group>"; };
+		9B224B102027328D00B4C126 /* ToVeryDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToVeryDoApp.swift; sourceTree = "<group>"; };
+		9B224B122027372000B4C126 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B224B0D2027325F00B4C126 /* PaperOnboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +99,7 @@
 		9B224ACF20272AB900B4C126 = {
 			isa = PBXGroup;
 			children = (
+				9B224B0C2027325F00B4C126 /* PaperOnboarding.framework */,
 				9B224ADA20272AB900B4C126 /* ToVeryDoApp */,
 				9B224AEF20272AB900B4C126 /* ToVeryDoAppTests */,
 				9B224AFA20272ABA00B4C126 /* ToVeryDoAppUITests */,
@@ -97,11 +120,11 @@
 		9B224ADA20272AB900B4C126 /* ToVeryDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				9B224B0B20272AD200B4C126 /* Model */,
+				9B224B0A20272ACD00B4C126 /* View */,
+				9B224B0920272AC500B4C126 /* Controller */,
 				9B224ADB20272AB900B4C126 /* AppDelegate.swift */,
-				9B224ADD20272AB900B4C126 /* ViewController.swift */,
-				9B224ADF20272AB900B4C126 /* Main.storyboard */,
 				9B224AE220272AB900B4C126 /* Assets.xcassets */,
-				9B224AE420272AB900B4C126 /* LaunchScreen.storyboard */,
 				9B224AE720272AB900B4C126 /* Info.plist */,
 			);
 			path = ToVeryDoApp;
@@ -125,6 +148,32 @@
 			path = ToVeryDoAppUITests;
 			sourceTree = "<group>";
 		};
+		9B224B0920272AC500B4C126 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B224ADD20272AB900B4C126 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B224B0A20272ACD00B4C126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B224ADF20272AB900B4C126 /* Main.storyboard */,
+				9B224AE420272AB900B4C126 /* LaunchScreen.storyboard */,
+				9B224B122027372000B4C126 /* OnBoardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B224B0B20272AD200B4C126 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B224B102027328D00B4C126 /* ToVeryDoApp.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +184,7 @@
 				9B224AD420272AB900B4C126 /* Sources */,
 				9B224AD520272AB900B4C126 /* Frameworks */,
 				9B224AD620272AB900B4C126 /* Resources */,
+				9B224B0F2027325F00B4C126 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B224B112027328D00B4C126 /* ToVeryDoApp.swift in Sources */,
+				9B224B132027372000B4C126 /* OnBoardingView.swift in Sources */,
 				9B224ADE20272AB900B4C126 /* ViewController.swift in Sources */,
 				9B224ADC20272AB900B4C126 /* AppDelegate.swift in Sources */,
 			);
@@ -426,11 +478,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 578PM6Q9D2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ToVeryDoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = stefan.ToVeryDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,11 +500,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 578PM6Q9D2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ToVeryDoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = stefan.ToVeryDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
